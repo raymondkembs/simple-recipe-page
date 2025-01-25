@@ -154,6 +154,7 @@ body{
 }
 @media (max-width: 666px ) {
     .con{
+        margin: 0 20px 0 20px;
         padding: 0;
         min-width: 370px;
         border-radius: 0;
