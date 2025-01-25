@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --white: hsl(0, 0%, 100%);
+    --stone100: hsl(30, 54%, 90%);
+    --stone150: hsl(30, 18%, 87%);
+    --stone600: hsl(30, 10%, 34%);
+    --stone900: hsl(24, 5%, 18%);
+    --brown800: hsl(14, 45%, 36%);
+    --rose800: hsl(332, 51%, 32%);
+    --rose50: hsl(330, 100%, 98%);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height: auto;
+    background: var(--stone100);
+}
+.con{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    width: 55%;
+    height: auto;
+    border-radius: 15px;
+    background: var(--white)
+}
+.con > div{
+    margin: 5px 5px 15px 5px;
+}
+.infoOne{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--rose50);
+}
+.infoOne img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.infoTwo,
+.infoThree,
+.infoFour,
+.infoFive,
+.infoSix{
+    width: 100%;
+    height: auto;
+}
+/* info container two */
+.infoTwo h1{
+    padding: 5px;
+    font-size: 2rem;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    color: var(--stone900)
+}
+.infoTwo p.pTwo{
+    padding: 5px;
+    font-size: 16px;
+    color: var(--stone600)
+}
+/* info container three */
+.infoThree{
+    padding: 20px;
+    border-radius: 7px;
+    background: var(--rose50);
+}
+.infoThree p{
+    padding-bottom: 5px;
+    padding-left: 7px;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--rose800)
+}
+.infoThree ul,
+.infoFour ul{
+    padding-left: 32px;
+}
+.infoThree ul li,
+.infoFour ul li{
+    padding: 5px 0 5px 20px;
+    color: var(--stone600)
+}
+/* info container four */
+
+.infoFour h2,
+.infoFive h2,
+.infoSix h2{
+    padding: 10px 10px 10px 5px;
+    letter-spacing: 1.5px;
+    color: var(--brown800);
+    font-family: "Young Serif", serif;
+}
+/* info container five */
+.infoFive ol {
+    list-style: none; /* Remove default numbering */
+    counter-reset: list-counter; /* Initialize counter */
+    padding-left: 45px;
+}
+.infoFive ol li {
+    padding: 5px 0 5px 6px;
+    color: var(--stone600);
+    counter-increment: list-counter; /* Increment counter */
+    position: relative; /* Positioning for pseudo-element */
+} 
+.infoFive ol li::before {
+    content: counter(list-counter) ". "; /* Add the number */
+    font-weight: bold; /* Make the number bold */
+    position: absolute; /* Position it absolutely */
+    left: -2em; /* Adjust the position as needed */
+    color: var(--brown800)
+}
+/* info container Six */
+.infoSix,
+.infoFive{
+    padding-top: 10px;
+    border-top: 1px solid var(--stone150);
+}
+.infoSix p{
+    padding: 5px 5px 15px 5px;
+    color: var(--stone600);
+}
+.infoSix table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.infoSix table tr td{
+    padding: 5px;
+    border-bottom: 1px solid var(--stone150);
+}
+.infoSix table tr td.a{
+    padding-left: 20px;
+    color: var(--stone600);
+}
+.infoSix table tr td.b{
+    font-weight: 600;
+    color: var(--brown800);
+}
+.infoSix table tr td.c{
+    border-bottom: none;
+}
+@media (max-width: 666px ) {
+    .con{
+        padding: 0;
+        min-width: 370px;
+        border-radius: 0;
+    }
+    .con > div{
+        margin: 0 5px 15px 5px;
+    }
+    /* image format */
+    .infoOne{
+        height: 150px;
+        overflow: hidden;
+        border-radius:0;
+        background: var(--rose50);
+    }
+    /* container two format */
+    .infoTwo,
+    .infoFour,
+    .infoFive,
+    .infoSix{
+        width: 88%;
+    }
+    /* container three format */
+    .infoThree{
+        width: 88%;
+    }
+    /* container Five format */
+    .infoFive ol li {
+        padding: 5px 15px 5px 6px;
+    }
+    /* container Six format */
+    .infoSix p{
+        width: 95%;
+    }
+    .infoSix table{
+        width: 100%;
+    }
+    .infoSix table tr td.a{
+        padding-left: 10%;
+    }
+}
