@@ -29,8 +29,8 @@ body{
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-    margin: 86px;
+    padding: 30px;
+    margin: 86px 20px 86px 20px;
     width: 55%;
     height: auto;
     border-radius: 15px;
